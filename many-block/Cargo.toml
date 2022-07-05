@@ -1,0 +1,18 @@
+[package]
+name = "many-block"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = "0.4.19"
+clap = { version = "3.2.6", features = [ "derive" ] }
+hex = "0.4.3"
+humantime = "2.1.0"
+many = { git = "https://github.com/liftedinit/many-rs.git" }
+many-client = { git = "https://github.com/liftedinit/many-rs.git" }
+minicbor = "0.18.0"
+tabled = "0.7.0"
+tracing = "0.1.35"
+tracing-subscriber = "0.2.24"
