@@ -10,8 +10,8 @@ chrono = "0.4.22"
 clap = { version = "3.2.6", features = [ "derive" ] }
 hex = "0.4.3"
 humantime = "2.1.0"
-many = { git = "https://github.com/liftedinit/many-rs.git" }
-many-client = { git = "https://github.com/liftedinit/many-rs.git" }
+many = { git = "https://github.com/liftedinit/many-rs.git", rev = "b97fa513ceaa56f8ac2c6a9ea5eb40f22ee6a8c6" }
+many-client = { git = "https://github.com/liftedinit/many-rs.git", rev = "b97fa513ceaa56f8ac2c6a9ea5eb40f22ee6a8c6" }
 minicbor = "0.18.0"
 tabled = "0.7.0"
 tracing = "0.1.35"
