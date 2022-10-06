@@ -13,7 +13,8 @@ struct Opts {
     /// The server to list the blocks from.
     server: ManyUrl,
 
-    /// Number of blocks to query (default to 30).
+    /// Number of blocks to query (default to 30). This cannot exceed the
+    /// max_height argument and will be clipped.
     #[clap(long, default_value = "30")]
     count: u64,
 
@@ -95,9 +96,7 @@ fn main() {
             BlockRow {
                 height: block.id.height,
                 tx_count: block.txs_count,
-                app_hash: block
-                    .app_hash
-                    .map_or("-".to_string(), |h| hex::encode(&h).to_string()),
+                app_hash: block.app_hash.map_or("-".to_string(), |h| hex::encode(&h)),
                 block_time: datetime.format("%F %T").to_string(),
                 delta,
             }
